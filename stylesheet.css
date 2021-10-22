@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);/*-- significa que iremos utilizar essa cor mais tarde utilizando a variável gray*/
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;/*Procura primeiro a roboto, se não achar, procura a segunda fonte*/
+  -webkit-font-smoothing: antialiased;/*webkit só funciona em navegadores que possuem suporte a webkit, tipo chrome */
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg);
+  width: 375px;
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;/*é o calculo do pixel dividido por 16, que deu 10rem*/
+  margin: 11.5rem auto 0;
+
+  position: relative;/*ele vai ser o parametro para a posição do absolute(avatar span)*/
+}
+
+.avatar span {
+  position: absolute;/*é o que vai deixar a imagem sobressaindo sobre tudo na página*/
+  top: -15px;
+  z-index: 1;/*Z é o eixo de profundidade, é necessário utilizar para imagem ficar mais perto*/
+}
+
+.avatar > img {/*Coloco o sinal > para dizer que só quero configurar a primeira img, senão ele configura todas*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;/*é o que faz a imagem se adaptar dentro das arguras definidas*/
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  /*tem esse site para verificar as larguras: bennettfeely.com/clippy*/
+}
+
+h1 {
+  font-size: 1.5rem;
+
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;/*tira as bolinhas*/
+  padding: 0;
+
+  display: flex;/*deixa um elemento do lado outro no eixo vertical*/
+  gap: 0.5rem;/*gap entre os elementos*/
+
+  justify-content: center;
+}
