@@ -1,6 +1,6 @@
 const LinksSocialMedia = { //Quando precisar alterar as informações do crachá, só precisa fazer isso aqui
     github: 'Juulds',
-    youtube: 'jakelinygracielly',
+    linkedin: 'in/juliana-lopes-751261109',
     facebook: 'xJLDSx',
     instagram: 'julianalds25',
     twitter: 'Julianalds25'
