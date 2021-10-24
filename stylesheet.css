@@ -17,10 +17,15 @@ body {
   place-items: center;
 }
 
+
 main {
-  background: url(images/background.svg);
-  width: 375px;
-  height: 812px;
+  
+  background: url(images/Mob.png) no-repeat center/cover;
+  /*width: 375px;
+  height: 812px;*/
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
 }
 
 .container {
@@ -43,6 +48,16 @@ main {
   position: absolute;/*é o que vai deixar a imagem sobressaindo sobre tudo na página*/
   top: -15px;
   z-index: 1;/*Z é o eixo de profundidade, é necessário utilizar para imagem ficar mais perto*/
+}
+
+.rotate {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
 }
 
 .avatar > img {/*Coloco o sinal > para dizer que só quero configurar a primeira img, senão ele configura todas*/
